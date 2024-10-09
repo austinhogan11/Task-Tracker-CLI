@@ -1,24 +1,29 @@
-#TODO 1: Present User with options & Request User Input
-print("Welcome to Task Tracker 1.0")
+print("Welcome to Task Tracker 1.0\n")
 
 trackerIsRunning = True
+
+tasks = ["Finish Task Tracker App", "Task 2"]
 
 while trackerIsRunning:
     user_selection = int(input("Please select an option:\n1. List Tasks\n2. Add Task\n3. Update Task\n4. Delete Task\n5. Exit\n"))
 
     if user_selection == 1:
-        print("List Tasks")
+        if len(tasks) < 1:
+            print("You currently have 0 tasks.\n")
+        else:
+            for task in tasks:
+                print(task)
     elif user_selection == 2:
-        print("Add Task")
+        print("Add Task\n")
     elif user_selection == 3:
-        print("Update Task")
+        print("Update Task\n")
     elif user_selection == 4:
-        print("Delete Task")
+        print("Delete Task\n")
     elif user_selection == 5:
-        print("Exiting Tracker")
+        print("Exiting Tracker\n")
         trackerIsRunning = False
     else:
-        print("Invalid Option")
+        print("Invalid Option\n")
 
 #TODO 2: Handle User Selection
 
